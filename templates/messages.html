@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Xabarlar</title>
+    </head>
+    <body>
+        <h1> Sizga kelgan xabarlar</h1>
+        <ul>
+        {% for message in messages %}
+            <li>
+                <p> <a href="mailto:{{message.sender_email}}">{{message.sender_name}}</a>: {{message.subject}}</p>
+                <span style="color:'red';"> {{message.text}} </span>
+            </li>
+
+        {% endfor %}
+        </ul>
+    </body>
+</html>
